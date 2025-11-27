@@ -42,7 +42,7 @@
 
     <div class="archive-container">
 
-        <!-- Main Section (หน้าแรก - ยินดีต้อนรับสู่นคร) -->
+        <!-- Main Section -->
         <section id="main" class="content-section active">
             <div class="section-header">WELCOME // THE_CITY</div>
             <h2>ยินดีต้อนรับสู่ The City</h2>
@@ -63,9 +63,7 @@
                     The City ถูกแบ่งออกเป็น <strong>26 เขต</strong> บริหารจัดการโดย 26 บริษัท (Wings) และองค์กรสูงสุด
                     "The Head"
                 </p>
-                <p>
-                    สังคมถูกแบ่งแยกอย่างชัดเจนระหว่าง:
-                </p>
+                <p>สังคมถูกแบ่งแยกอย่างชัดเจนระหว่าง:</p>
                 <ul class="feature-list">
                     <li><strong>รัง (Nest):</strong> พื้นที่หรูหราและปลอดภัย สำหรับผู้มีฐานะ</li>
                     <li><strong>ตรอก (Backstreets):</strong> พื้นที่อันตราย เต็มไปด้วยอาชญากรรมและความรุนแรง</li>
@@ -100,31 +98,32 @@
     </div>
 
     <script>
-        // Secret Code System for DM Access
-        // พิมพ์คำว่า "COGITO" เพื่อเข้าสู่ DM Panel
+        // Secret Code: พิมพ์ "COGITO" เพื่อเข้า DM Panel
         let secretCode = '';
         const secretPassword = 'COGITO';
         let codeTimer = null;
 
-        document.addEventListener('keypress', (e) => {
-            // เพิ่มตัวอักษรที่พิมพ์
-            secretCode += e.key.toUpperCase();
+        document.addEventListener('keydown', (e) => {
+            // ข้าม modifier keys และ special keys
+            if (e.ctrlKey || e.altKey || e.metaKey || e.key.length > 1) {
+                return;
+            }
 
-            // Clear timer ถ้ามี
+            secretCode += e.key.toUpperCase();
+            console.log('Code:', secretCode);
+
             if (codeTimer) clearTimeout(codeTimer);
 
-            // ตั้ง timer ใหม่ - รีเซ็ตหลัง 2 วินาทีถ้าไม่พิมพ์ต่อ
             codeTimer = setTimeout(() => {
                 secretCode = '';
             }, 2000);
 
-            // เช็คว่าตรงกับรหัสลับไหม
             if (secretCode.includes(secretPassword)) {
+                console.log('✅ Access Granted!');
                 activateDMPortal();
                 secretCode = '';
             }
 
-            // ถ้ายาวเกินไป ตัดให้เหลือแค่ความยาวของรหัส
             if (secretCode.length > secretPassword.length + 5) {
                 secretCode = secretCode.slice(-secretPassword.length);
             }
@@ -135,7 +134,6 @@
             portal.classList.remove('hidden');
             portal.classList.add('active');
 
-            // รอ animation แล้ว redirect
             setTimeout(() => {
                 window.location.href = 'dm-login.html';
             }, 2000);
@@ -143,7 +141,6 @@
     </script>
 
     <style>
-        /* DM Portal Secret Access Styles */
         .dm-portal {
             position: fixed;
             top: 0;

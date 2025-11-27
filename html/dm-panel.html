@@ -72,7 +72,17 @@
 
     </div>
 
+    <!-- Load data files first (order matters!) -->
+    <script src="../js/data/ego-weapons.js"></script>
+    <script src="../js/data/abnormalities.js"></script>
+    <script src="../js/data/npcs.js"></script>
+    <script src="../js/data/items.js"></script>
+    <script src="../js/data/locations.js"></script>
+
+    <!-- Then load the main database file that combines them -->
     <script src="../js/dm-data.js"></script>
+
+    <!-- Finally load the panel logic -->
     <script src="../js/dm-panel.js"></script>
 </body>
 

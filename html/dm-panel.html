@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Panel - Project Archived</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../pic/Project Archive.jpg">
+    <link rel="stylesheet" href="../css/dm-panel.css">
+</head>
+
+<body>
+    <header>
+        <h1>PROJECT ARCHIVED</h1>
+        <p class="subtitle">Dungeon Master Control Panel</p>
+    </header>
+
+    <nav class="menu-nav">
+        <div class="menu-container">
+            <a href="index.html" class="menu-btn">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-text">Main</span>
+            </a>
+            <a href="dm-panel.html" class="menu-btn active">
+                <span class="btn-icon">👁️</span>
+                <span class="btn-text">DM Panel</span>
+            </a>
+            <button class="menu-btn" onclick="logout()" style="border: none;">
+                <span class="btn-icon">🚪</span>
+                <span class="btn-text">Logout</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dm-container">
+
+        <!-- Search and Filter Section -->
+        <div class="search-section">
+            <div class="section-header">SEARCH // DATABASE_QUERY</div>
+            <div class="search-controls">
+                <input type="text" id="search-input" placeholder="ค้นหา: ชื่อ, คำอธิบาย, ประเภท..."
+                    oninput="handleSearch()">
+
+                <select id="category-filter" onchange="handleFilter()">
+                    <option value="all">ทั้งหมด</option>
+                    <option value="ego">EGO Weapons</option>
+                    <option value="abnormality">Abnormalities</option>
+                    <option value="npc">NPCs</option>
+                    <option value="item">Items</option>
+                    <option value="location">Locations</option>
+                </select>
+
+                <select id="risk-filter" onchange="handleFilter()">
+                    <option value="all">ทุก Risk Level</option>
+                    <option value="zayin">ZAYIN</option>
+                    <option value="teth">TETH</option>
+                    <option value="he">HE</option>
+                    <option value="waw">WAW</option>
+                    <option value="aleph">ALEPH</option>
+                </select>
+            </div>
+            <div class="search-stats" id="search-stats">
+                แสดง <span id="result-count">0</span> รายการ จากทั้งหมด <span id="total-count">0</span> รายการ
+            </div>
+        </div>
+
+        <!-- Content Display -->
+        <div class="dm-content" id="dm-content">
+            <!-- จะถูกเติมด้วย JavaScript -->
+        </div>
+
+    </div>
+
+    <script src="../js/dm-data.js"></script>
+    <script src="../js/dm-panel.js"></script>
+</body>
+
+</html>

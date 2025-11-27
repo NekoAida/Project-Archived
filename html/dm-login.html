@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Access - Project Archived</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../pic/Project Archive.jpg">
+    <style>
+        .login-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid #ffc107;
+            box-shadow: 0 0 30px rgba(255, 193, 7, 0.3);
+        }
+
+        .login-title {
+            color: #ffc107;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            color: #ffc107;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9em;
+        }
+
+        .form-group input {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid #444;
+            color: #e0e0e0;
+            padding: 12px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ffc107;
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            border: none;
+            color: #000;
+            padding: 15px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(135deg, #ffd54f, #ffb74d);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid #f44336;
+            color: #ff5252;
+            padding: 12px;
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .warning-text {
+            color: #ff5252;
+            font-size: 0.85em;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .security-badge {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid #4caf50;
+            color: #4caf50;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.8em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>PROJECT ARCHIVED</h1>
+        <p class="subtitle">DM Access Panel</p>
+    </header>
+
+    <nav class="menu-nav">
+        <div class="menu-container">
+            <a href="index.html" class="menu-btn">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-text">Main</span>
+            </a>
+            <a href="about.html" class="menu-btn">
+                <span class="btn-icon">📂</span>
+                <span class="btn-text">About Project</span>
+            </a>
+            <a href="associations.html" class="menu-btn">
+                <span class="btn-icon">🏛️</span>
+                <span class="btn-text">Associations</span>
+            </a>
+            <a href="the-wing.html" class="menu-btn">
+                <span class="btn-icon">🏙️</span>
+                <span class="btn-text">The Wings</span>
+            </a>
+            <a href="detail.html" class="menu-btn">
+                <span class="btn-icon">📋</span>
+                <span class="btn-text">Detail</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="archive-container">
+        <div class="login-container">
+            <div class="security-badge">
+                🔒 SECURE ACCESS REQUIRED
+            </div>
+
+            <h2 class="login-title">DM PANEL ACCESS</h2>
+
+            <form class="login-form" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label for="access-code">Access Code:</label>
+                    <input type="password" id="access-code" name="access-code" required
+                        placeholder="Enter DM Access Code" autocomplete="off">
+                </div>
+
+                <button type="submit" class="login-btn">AUTHENTICATE</button>
+
+                <div class="error-message" id="error-msg">
+                    ⚠️ Invalid Access Code
+                </div>
+            </form>
+
+            <p class="warning-text">
+                ⚠️ AUTHORIZED PERSONNEL ONLY<br>
+                Unauthorized access attempts are logged
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Simple client-side authentication (สำหรับ static website)
+        // ในการใช้งานจริงควรใช้ backend authentication
+
+        const DM_ACCESS_CODE = 'ProjectMoon2024'; // เปลี่ยนรหัสได้ที่นี่
+
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const inputCode = document.getElementById('access-code').value;
+            const errorMsg = document.getElementById('error-msg');
+
+            // Sanitize input เพื่อป้องกัน XSS
+            const sanitizedCode = sanitizeInput(inputCode);
+
+            if (sanitizedCode === DM_ACCESS_CODE) {
+                // สร้าง session token
+                const sessionToken = generateSessionToken();
+                sessionStorage.setItem('dm_session', sessionToken);
+                sessionStorage.setItem('dm_auth_time', Date.now());
+
+                // Redirect ไปหน้า DM Panel
+                window.location.href = 'dm-panel.html';
+            } else {
+                // แสดง error
+                errorMsg.style.display = 'block';
+                document.getElementById('access-code').value = '';
+
+                // ซ่อน error หลัง 3 วินาที
+                setTimeout(() => {
+                    errorMsg.style.display = 'none';
+                }, 3000);
+            }
+
+            return false;
+        }
+
+        // Sanitize input เพื่อป้องกัน XSS
+        function sanitizeInput(input) {
+            const div = document.createElement('div');
+            div.textContent = input;
+            return div.innerHTML;
+        }
+
+        // Generate session token
+        function generateSessionToken() {
+            return Array.from(crypto.getRandomValues(new Uint8Array(32)))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+
+        // ตรวจสอบว่ามี session อยู่แล้วหรือไม่
+        window.addEventListener('load', () => {
+            const session = sessionStorage.getItem('dm_session');
+            const authTime = sessionStorage.getItem('dm_auth_time');
+
+            // ถ้ามี session และยังไม่หมดอายุ (24 ชั่วโมง)
+            if (session && authTime) {
+                const timeElapsed = Date.now() - parseInt(authTime);
+                const twentyFourHours = 24 * 60 * 60 * 1000;
+
+                if (timeElapsed < twentyFourHours) {
+                    // Redirect ไปหน้า DM Panel
+                    window.location.href = 'dm-panel.html';
+                } else {
+                    // Session หมดอายุ
+                    sessionStorage.removeItem('dm_session');
+                    sessionStorage.removeItem('dm_auth_time');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

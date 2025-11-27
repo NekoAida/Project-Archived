@@ -89,6 +89,181 @@
         </section>
 
     </div>
+
+    <!-- Secret DM Access Portal -->
+    <div id="dm-portal" class="dm-portal hidden">
+        <div class="portal-content">
+            <div class="portal-icon">👁️</div>
+            <div class="portal-text">ACCESS GRANTED</div>
+            <div class="portal-subtext">Entering DM Panel...</div>
+        </div>
+    </div>
+
+    <script>
+        // Secret Code System for DM Access
+        // พิมพ์คำว่า "COGITO" เพื่อเข้าสู่ DM Panel
+        let secretCode = '';
+        const secretPassword = 'COGITO';
+        let codeTimer = null;
+
+        document.addEventListener('keypress', (e) => {
+            // เพิ่มตัวอักษรที่พิมพ์
+            secretCode += e.key.toUpperCase();
+
+            // Clear timer ถ้ามี
+            if (codeTimer) clearTimeout(codeTimer);
+
+            // ตั้ง timer ใหม่ - รีเซ็ตหลัง 2 วินาทีถ้าไม่พิมพ์ต่อ
+            codeTimer = setTimeout(() => {
+                secretCode = '';
+            }, 2000);
+
+            // เช็คว่าตรงกับรหัสลับไหม
+            if (secretCode.includes(secretPassword)) {
+                activateDMPortal();
+                secretCode = '';
+            }
+
+            // ถ้ายาวเกินไป ตัดให้เหลือแค่ความยาวของรหัส
+            if (secretCode.length > secretPassword.length + 5) {
+                secretCode = secretCode.slice(-secretPassword.length);
+            }
+        });
+
+        function activateDMPortal() {
+            const portal = document.getElementById('dm-portal');
+            portal.classList.remove('hidden');
+            portal.classList.add('active');
+
+            // รอ animation แล้ว redirect
+            setTimeout(() => {
+                window.location.href = 'dm-login.html';
+            }, 2000);
+        }
+    </script>
+
+    <style>
+        /* DM Portal Secret Access Styles */
+        .dm-portal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .dm-portal.hidden {
+            display: none;
+        }
+
+        .dm-portal.active {
+            opacity: 1;
+            pointer-events: all;
+            animation: portalPulse 2s ease;
+        }
+
+        .portal-content {
+            text-align: center;
+            animation: portalReveal 1.5s ease;
+        }
+
+        .portal-icon {
+            font-size: 6em;
+            margin-bottom: 20px;
+            animation: eyeBlink 1s infinite alternate;
+            filter: drop-shadow(0 0 20px #ffc107);
+        }
+
+        .portal-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.5em;
+            color: #ffc107;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 193, 7, 0.8);
+            animation: textGlow 1s ease infinite;
+        }
+
+        .portal-subtext {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2em;
+            color: #888;
+            animation: fadeInOut 1.5s ease infinite;
+        }
+
+        @keyframes portalPulse {
+            0% {
+                background: rgba(0, 0, 0, 0.95);
+            }
+
+            50% {
+                background: rgba(255, 193, 7, 0.1);
+            }
+
+            100% {
+                background: rgba(0, 0, 0, 0.95);
+            }
+        }
+
+        @keyframes portalReveal {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes eyeBlink {
+            0% {
+                transform: scaleY(1);
+            }
+
+            100% {
+                transform: scaleY(0.1);
+            }
+        }
+
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px rgba(255, 193, 7, 0.8);
+            }
+
+            50% {
+                text-shadow: 0 0 40px rgba(255, 193, 7, 1), 0 0 60px rgba(255, 193, 7, 0.6);
+            }
+        }
+
+        @keyframes fadeInOut {
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
 </body>
 
 </html>

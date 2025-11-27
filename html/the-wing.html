@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wings - Project Archived</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../pic/Project Archive.jpg">
+</head>
+
+<body>
+    <header>
+        <h1>PROJECT ARCHIVED</h1>
+        <p class="subtitle">Book, Distortion, Star And City</p>
+    </header>
+
+    <nav class="menu-nav">
+        <div class="menu-container">
+            <a href="index.html" class="menu-btn">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-text">Main</span>
+            </a>
+            <a href="about.html" class="menu-btn">
+                <span class="btn-icon">📂</span>
+                <span class="btn-text">About Project</span>
+            </a>
+            <a href="associations.html" class="menu-btn">
+                <span class="btn-icon">🏛️</span>
+                <span class="btn-text">Associations</span>
+            </a>
+            <a href="the-wing.html" class="menu-btn active">
+                <span class="btn-icon">🏙️</span>
+                <span class="btn-text">The Wings</span>
+            </a>
+            <a href="detail.html" class="menu-btn">
+                <span class="btn-icon">📋</span>
+                <span class="btn-text">Detail</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="archive-container">
+
+        <!-- The Wings Section -->
+        <section class="content-section active wing-section">
+            <div class="section-header">DATABASE // THE_WINGS</div>
+            <h2>The Wings (26 บรรษัทยักษ์แห่ง The City)</h2>
+
+            <div class="intro-box">
+                <h3>🏢 เกี่ยวกับ The Wings</h3>
+                <p>
+                    <strong>The Wings</strong> หรือที่รู้จักกันในชื่อ "Wings of the World"
+                    คือกลุ่มของบรรษัทที่ใหญ่ที่สุดและทรงอำนาจที่สุด 26 แห่งใน The City
+                    พวกเขาทำหน้าที่เป็นองค์กรปกครองของ Nest ในแต่ละเขต โดยอาศัยพลังจาก <strong>Singularities</strong>
+                    ซึ่งเป็นเทคโนโลยีที่จดสิทธิบัตรซึ่งสามารถฝ่าฝืนกฎของฟิสิกส์ได้
+                </p>
+                <p>
+                    The Wings ถูกปกครองโดยตรงจาก <strong>The Head, The Eye และ The Claw</strong>
+                    ซึ่งเป็นอำนาจสูงสุดที่ลึกลับของ The City
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <p>⚠️ <strong>หมายเหตุ:</strong> ปัจจุบันมี 25 Wing ที่ดำเนินการอยู่ (L Corp. ได้ล่มสลายไปแล้ว)</p>
+            </div>
+
+            <!-- Current Wings List -->
+            <h3 class="section-title">📋 Current Wings (Wings ปัจจุบัน)</h3>
+            <p class="section-desc">17 จาก 26 Wings ที่มีข้อมูลปรากฏ ณ เวลาของ Library of Ruina</p>
+
+            <div class="wing-grid">
+
+                <!-- A Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>A Corp.</h3>
+                        <span class="wing-letter">A</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Alias:</strong> The Head</p>
+                        <p><strong>Role:</strong> องค์กรปกครองสูงสุดของ The City</p>
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">A Corp. คือ The Head เอง องค์กรที่ควบคุม The City ทั้งหมด
+                            มีอำนาจสูงสุดเหนือ Wings ทั้งหมด</p>
+                    </div>
+                </div>
+
+                <!-- B Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>B Corp.</h3>
+                        <span class="wing-letter">B</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Alias:</strong> The Eye</p>
+                        <p><strong>Role:</strong> หน่วยข่าวกรองและเฝ้าระวัง</p>
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">B Corp. หรือ The Eye ทำหน้าที่เป็นตาของ The Head
+                            คอยเฝ้าดูและรวบรวมข้อมูลทั่ว The City</p>
+                    </div>
+                </div>
+
+                <!-- C Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>C Corp.</h3>
+                        <span class="wing-letter">C</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Alias:</strong> The Claw</p>
+                        <p><strong>Role:</strong> หน่วยบังคับใช้กฎหมาย</p>
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">C Corp. หรือ The Claw เป็นกรงเล็บของ The Head
+                            ทำหน้าที่บังคับใช้กฎหมายและลงโทษผู้ฝ่าฝืน มีส่วนเกี่ยวข้องกับ Smoke War</p>
+                    </div>
+                </div>
+
+                <!-- D Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>D Corp.</h3>
+                        <span class="wing-letter">D</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- E Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>E Corp.</h3>
+                        <span class="wing-letter">E</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- F Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>F Corp.</h3>
+                        <span class="wing-letter">F</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- G Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>G Corp.</h3>
+                        <span class="wing-letter">G</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- H Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>H Corp.</h3>
+                        <span class="wing-letter">H</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- I Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>I Corp.</h3>
+                        <span class="wing-letter">I</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- J Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>J Corp.</h3>
+                        <span class="wing-letter">J</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- K Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>K Corp.</h3>
+                        <span class="wing-letter">K</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ (อาจเกี่ยวข้องกับการรักษา/ฟื้นฟู)</p>
+                        <p class="wing-desc">K Corp. มีเทคโนโลยีที่เกี่ยวข้องกับการรักษาและฟื้นฟูร่างกาย</p>
+                    </div>
+                </div>
+
+                <!-- L Crop -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>L Crop.</h3>
+                        <span class="wing-letter">L</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- M Crop -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>M Crop.</h3>
+                        <span class="wing-letter">M</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- N Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>N Corp.</h3>
+                        <span class="wing-letter">N</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Notable Character:</strong> Moses</p>
+                        <p><strong>Singularity:</strong> เกี่ยวข้องกับ Nail</p>
+                        <p class="wing-desc">N Corp. มีความเกี่ยวข้องกับเทคโนโลยี Nail และมีตัวละครสำคัญชื่อ Moses</p>
+                    </div>
+                </div>
+
+                <!-- O Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>O Corp.</h3>
+                        <span class="wing-letter">O</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- P Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>P Corp.</h3>
+                        <span class="wing-letter">P</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- Q Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>Q Corp.</h3>
+                        <span class="wing-letter">Q</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- R Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>R Corp.</h3>
+                        <span class="wing-letter">R</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> Reindeer/Rabbit Team (Clone Technology)</p>
+                        <p class="wing-desc">R Corp. มีเทคโนโลยีการโคลนนิ่งที่ใช้สร้าง Reindeer และ Rabbit Teams</p>
+                    </div>
+                </div>
+
+                <!-- S Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>S Corp.</h3>
+                        <span class="wing-letter">S</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- T Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>T Corp.</h3>
+                        <span class="wing-letter">T</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Alias:</strong> TimeTrack</p>
+                        <p><strong>Singularity:</strong> Time Manipulation (การบิดเบือนเวลา)</p>
+                        <p class="wing-desc">T Corp. ครอบครองเทคโนโลยีการควบคุมเวลา สามารถทำให้เวลาไหลเร็วหรือช้าลงได้
+                            มีส่วนเกี่ยวข้องกับ The Crying Children</p>
+                    </div>
+                </div>
+
+                <!-- U Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>U Corp.</h3>
+                        <span class="wing-letter">U</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- V Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>V Corp.</h3>
+                        <span class="wing-letter">V</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- W Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>W Corp.</h3>
+                        <span class="wing-letter">W</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Alias:</strong> WARP Corp.</p>
+                        <p><strong>Singularity:</strong> WARP Trains (รถไฟวาร์ป)</p>
+                        <p class="wing-desc">W Corp. ดูแลระบบขนส่ง WARP Train ที่สามารถเทเลพอร์ตผู้โดยสารข้าม Districts
+                            ได้ทันที แต่ภายในรถไฟใช้เวลาหลายสิบปี</p>
+                    </div>
+                </div>
+
+                <!-- X Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>X Corp.</h3>
+                        <span class="wing-letter">X</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+                <!-- Y Corp -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>Y Corp.</h3>
+                        <span class="wing-letter">Y</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Singularity:</strong> ไม่ทราบ</p>
+                        <p class="wing-desc">ข้อมูลจำกัด</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Former Wings -->
+            <h3 class="section-title" style="margin-top: 60px;">🏚️ Former Wings (Wings ที่ล่มสลายแล้ว)</h3>
+            <p class="section-desc">Wings ที่เคยมีอำนาจแต่ได้ล่มสลายไป</p>
+
+            <div class="wing-grid">
+
+                <!-- L Corp -->
+                <div class="wing-card former">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>L Corp.</h3>
+                        <span class="wing-letter">L</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Alias:</strong> Lobotomy Corporation</p>
+                        <p><strong>Singularity:</strong> Cogito (พลังงานจาก Abnormalities)</p>
+                        <p><strong>Founder:</strong> Ayin</p>
+                        <p><strong>Notable Characters:</strong> Benjamin, Binah (Garion)</p>
+                        <p class="wing-desc">L Corp. เป็นบรรษัทที่รวบรวมและทดลองกับ Abnormalities เพื่อสกัด Enkephalin
+                            (Cogito) เป็นพลังงาน บรรษัทได้ล่มสลายหลังจากเหตุการณ์ใน Lobotomy Corporation
+                            และนำไปสู่การก่อตั้ง Library ใน Library of Ruina</p>
+                    </div>
+                </div>
+
+                <!-- H Corp (Former) -->
+                <div class="wing-card former">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>H Corp. (เก่า)</h3>
+                        <span class="wing-letter">H</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Event:</strong> Smoke War</p>
+                        <p class="wing-desc">H Corp. เก่าได้ล่มสลายในช่วง Smoke War และถูกแทนที่ด้วย H Corp. ใหม่</p>
+                    </div>
+                </div>
+
+                <!-- The Carnival -->
+                <div class="wing-card former">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>The Carnival</h3>
+                        <span class="wing-letter">?</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Status:</strong> Wing ที่ล่มสลายไปแล้ว</p>
+                        <p class="wing-desc">ข้อมูลจำกัด Wing ที่ล่มสลายไปในอดีต</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="intro-box" style="margin-top: 40px;">
+                <h3>📊 สถิติ</h3>
+                <ul class="feature-list">
+                    <li><strong>Wings ทั้งหมด:</strong> 26 Wings (ตามตัวอักษร A-Z)</li>
+                    <li><strong>Wings ที่ทราบข้อมูล:</strong> 17 Wings</li>
+                    <li><strong>Wings ที่ยังดำเนินการ:</strong> 25 Wings (L Corp. ล่มสลาย)</li>
+                    <li><strong>The Head Components:</strong> A Corp. (The Head), B Corp. (The Eye), C Corp. (The Claw)
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        function toggleWing(header) {
+            const card = header.parentElement;
+            const content = card.querySelector('.wing-content');
+            const icon = header.querySelector('.expand-icon');
+
+            // Toggle active class
+            card.classList.toggle('active');
+
+            // Rotate icon
+            if (card.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>

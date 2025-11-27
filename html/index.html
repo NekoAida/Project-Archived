@@ -15,82 +15,80 @@
         <p class="subtitle">Book, Distortion, Star And City</p>
     </header>
 
+    <nav class="menu-nav">
+        <div class="menu-container">
+            <a href="index.html" class="menu-btn active">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-text">Main</span>
+            </a>
+            <a href="about.html" class="menu-btn">
+                <span class="btn-icon">📂</span>
+                <span class="btn-text">About Project</span>
+            </a>
+            <a href="associations.html" class="menu-btn">
+                <span class="btn-icon">🏛️</span>
+                <span class="btn-text">Associations</span>
+            </a>
+            <a href="the-wing.html" class="menu-btn">
+                <span class="btn-icon">🏙️</span>
+                <span class="btn-text">The Wings</span>
+            </a>
+            <a href="detail.html" class="menu-btn">
+                <span class="btn-icon">📋</span>
+                <span class="btn-text">Detail</span>
+            </a>
+        </div>
+    </nav>
+
     <div class="archive-container">
-        
-        <section class="lore-section">
-            <div class="section-header">RECORD // WORLD_LORE</div>
-            <h2>ยินดีต้อนรับสู่ "นคร" (The City)</h2>
-            <p>
-                ปีศักราชปัจจุบันคือ 984 ทรัพยากรธรรมชาติส่วนใหญ่ของโลกได้ถูกใช้จนหมดสิ้น นำไปสู่การค้นพบเทคโนโลยีปาฏิหาริย์ที่เรียกว่า <strong>"ซิงกูลาริตี้ (Singularities)"</strong> 
-                เหล่าบรรษัทต่างผงาดขึ้นมาเพื่อครอบครองสิ่งมหัศจรรย์เหล่านี้ และร่วมกันก่อตั้งเมืองขนาดยักษ์ที่รู้จักกันในชื่อ "นคร" [cite: 89, 90]
-            </p>
-            <p>
-                นครถูกแบ่งออกเป็น 26 เขต บริหารจัดการโดย 26 บรรษัท (Wings) และองค์กรสูงสุด "The Head" 
-                สังคมถูกแบ่งแยกระหว่าง "รัง (Nest)" ที่หรูหราปลอดภัย และ "ตรอก (Backstreets)" ที่เต็มไปด้วยอันตรายและอาชญากรรม [cite: 91, 92]
-            </p>
-            <p class="flavor">"ในสังคมทุรยุคนี้ ผู้ที่มีเจตจำนงแข็งแกร่งเท่านั้นจึงจะรอดชีวิต" [cite: 92]</p>
-        </section>
 
-        <hr>
+        <!-- Main Section (หน้าแรก - ยินดีต้อนรับสู่นคร) -->
+        <section id="main" class="content-section active">
+            <div class="section-header">WELCOME // THE_CITY</div>
+            <h2>ยินดีต้อนรับสู่ The City</h2>
 
-        <section class="associations-section">
-            <div class="section-header">DATABASE // ASSOCIATIONS</div>
-            <h2>สมาคม (The 12 Associations)</h2>
-            <p>องค์กรขนาดใหญ่ที่ดูแลความเรียบร้อยและรับงานต่างๆ ในนคร โดยแบ่งหน้าที่กันอย่างชัดเจน:</p>
+            <div class="intro-box">
+                <h3>🌆 The City</h3>
+                <p>
+                    ปีศักราชปัจจุบันคือ 984 ทรัพยากรธรรมชาติส่วนใหญ่ของโลกได้ถูกใช้จนหมดสิ้น
+                    นำไปสู่การค้นพบเทคโนโลยีปาฏิหาริย์ที่เรียกว่า <strong>"ซิงกูลาริตี้ (Singularities)"</strong>
+                    เหล่าบรรษัทต่างผงาดขึ้นมาเพื่อครอบครองสิ่งมหัศจรรย์เหล่านี้
+                    และร่วมกันก่อตั้งเมืองขนาดยักษ์ที่รู้จักกันในชื่อ "นคร" (The City)
+                </p>
+            </div>
 
-            <div class="grid-container">
-                
-                <div class="data-card">
-                    <h3>Hana Association</h3>
-                    <span class="tag">Rank 1</span>
-                    <p>สมาคมอันดับหนึ่ง ผู้ดูแลและจัดลำดับความสามารถของ Fixer, สำนักงาน และสมาคมอื่นๆ ทั้งหมด [cite: 172, 368]</p>
-                </div>
+            <div class="intro-box">
+                <h3>🏢 โครงสร้างของ The City</h3>
+                <p>
+                    The City ถูกแบ่งออกเป็น <strong>26 เขต</strong> บริหารจัดการโดย 26 บริษัท (Wings) และองค์กรสูงสุด
+                    "The Head"
+                </p>
+                <p>
+                    สังคมถูกแบ่งแยกอย่างชัดเจนระหว่าง:
+                </p>
+                <ul class="feature-list">
+                    <li><strong>รัง (Nest):</strong> พื้นที่หรูหราและปลอดภัย สำหรับผู้มีฐานะ</li>
+                    <li><strong>ตรอก (Backstreets):</strong> พื้นที่อันตราย เต็มไปด้วยอาชญากรรมและความรุนแรง</li>
+                </ul>
+                <p class="flavor">"ในสังคมทุรยุคนี้ ผู้ที่มีเจตจำนงแข็งแกร่งเท่านั้นจึงจะรอดชีวิต"</p>
+            </div>
 
-                <div class="data-card">
-                    <h3>Zwei Association</h3>
-                    <span class="tag">Protection</span>
-                    <p>เปรียบเสมือนตำรวจของนคร เชี่ยวชาญด้านการรักษาความปลอดภัย เป็นบอดี้การ์ด และรักษากฎหมาย </p>
-                </div>
+            <div class="intro-box">
+                <h3>⚙️ ระบบอำนาจ</h3>
+                <ul class="feature-list">
+                    <li><strong>The Head:</strong> องค์กรลึกลับที่ควบคุมนครทั้งหมด</li>
+                    <li><strong>Wings:</strong> บรรษัทยักษ์ 26 แห่ง แต่ละแห่งครอบครอง Singularity</li>
+                    <li><strong>Associations:</strong> สมาคมนักรับจ้าง (Fixer) 12 สมาคม</li>
+                    <li><strong>Fixers:</strong> นักรับจ้างที่ทำงานให้กับผู้มีอำนาจ</li>
+                </ul>
+            </div>
 
-                <div class="data-card">
-                    <h3>Seven Association</h3>
-                    <span class="tag">Intel / Investigation</span>
-                    <p>เชี่ยวชาญด้านข้อมูลข่าวสาร การสืบสวน และการหาจุดอ่อนของศัตรู ข้อมูลคืออาวุธที่ร้ายกาจที่สุด [cite: 393, 394]</p>
-                </div>
-
-                <div class="data-card">
-                    <h3>Liu Association</h3>
-                    <span class="tag">Warfare</span>
-                    <p>ผู้เชี่ยวชาญด้านสงครามเต็มรูปแบบ การต่อสู้แนวหน้า และการใช้ศิลปะการต่อสู้ผสานกับไฟ [cite: 406, 412]</p>
-                </div>
-
-                <div class="data-card">
-                    <h3>Shi Association</h3>
-                    <span class="tag">Assassination</span>
-                    <p>องค์กรลอบสังหารที่ทำงานในเงามืด เน้นความรวดเร็วและการปลิดชีพศัตรูโดยไม่ให้รู้ตัว "ความตายนั้นเท่าเทียม" [cite: 915, 930]</p>
-                </div>
-
-                <div class="data-card">
-                    <h3>Cinq Association</h3>
-                    <span class="tag">Dueling</span>
-                    <p>ผู้เชี่ยวชาญการดวลตัวต่อตัว รับจ้างเป็นตัวแทนประลองและจัดการข้อพิพาทด้วยความเร็วและสไตล์ [cite: 486, 487]</p>
-                </div>
-
-                <div class="data-card">
-                    <h3>Dieci Association</h3>
-                    <span class="tag">Knowledge</span>
-                    <p>สมาคมที่รวบรวมและปกป้องความรู้ ต่อสู้ด้วยหมัดและปัญญา (หรือกุญแจยักษ์) เชื่อในหลักการ "จิตใจอยู่เหนือวัตถุ" [cite: 444, 461]</p>
-                </div>
-
-                 <div class="data-card">
-                    <h3>Oufi Association</h3>
-                    <span class="tag">Execution</span>
-                    <p>ผู้ตรวจสอบพันธะสัญญาและการค้า เน้นการโจมตีที่สั่นสะเทือนถึงแก่น (Tremor) เพื่อตัดสินโทษผู้ผิดสัญญา [cite: 504]</p>
-                </div>
-
+            <div class="warning-box">
+                <p>⚠️ <strong>คำเตือน:</strong> ในThe City ชีวิตมนุษย์มีค่าน้อยกว่าข้อมูลและเทคโนโลยี</p>
             </div>
         </section>
 
     </div>
 </body>
+
 </html>

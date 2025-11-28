@@ -25,13 +25,17 @@
                 <span class="btn-icon">📂</span>
                 <span class="btn-text">About Project</span>
             </a>
-            <a href="associations.html" class="menu-btn active">
+            <a href="associations.html" class="menu-btn">
                 <span class="btn-icon">🏛️</span>
                 <span class="btn-text">Associations</span>
             </a>
             <a href="the-wing.html" class="menu-btn">
                 <span class="btn-icon">🏙️</span>
                 <span class="btn-text">The Wings</span>
+            </a>
+            <a href="districts.html" class="menu-btn">
+                <span class="btn-icon">🗺️</span>
+                <span class="btn-text">Districts</span>
             </a>
             <a href="detail.html" class="menu-btn">
                 <span class="btn-icon">📋</span>
@@ -41,70 +45,1006 @@
     </nav>
 
     <div class="archive-container">
-
-        <!-- Associations Section -->
         <section class="content-section active associations-section">
-            <div class="section-header">DATABASE // ASSOCIATIONS</div>
+            <div class="section-header">DATABASE // ORGANIZATIONS</div>
+
+            <!-- CSS Styles -->
+            <style>
+                .associations-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 20px;
+                    margin: 20px 0;
+                }
+
+                .association-card {
+                    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.05));
+                    border: 1px solid rgba(255, 193, 7, 0.3);
+                    border-radius: 8px;
+                    padding: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+
+                .association-card:hover {
+                    border-color: rgba(255, 193, 7, 0.6);
+                    box-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
+                    transform: translateY(-2px);
+                }
+
+                .association-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                }
+
+                .association-header h3 {
+                    color: #ffc107;
+                    margin: 0;
+                    font-size: 1.2em;
+                }
+
+                .expand-icon {
+                    color: #ffc107;
+                    font-size: 1.2em;
+                    transition: transform 0.3s ease;
+                }
+
+                .association-preview {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 0.9em;
+                    font-style: italic;
+                }
+
+                .association-content {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    border-top: 1px solid rgba(255, 193, 7, 0.2);
+                    animation: slideDown 0.3s ease;
+                }
+
+                @keyframes slideDown {
+                    from {
+                        opacity: 0;
+                        max-height: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                        max-height: 500px;
+                    }
+                }
+
+                .info-row {
+                    margin-bottom: 12px;
+                }
+
+                .info-label {
+                    color: #ffc107;
+                    display: inline-block;
+                    min-width: 140px;
+                }
+
+                .info-value {
+                    color: rgba(255, 255, 255, 0.9);
+                }
+
+                hr {
+                    margin: 60px 0;
+                    border: none;
+                    border-top: 2px solid rgba(255, 193, 7, 0.2);
+                }
+
+                h2,
+                h3 {
+                    color: #ffc107;
+                }
+            </style>
+
+            <!-- ASSOCIATIONS SECTION -->
             <h2>สมาคม (The 12 Associations)</h2>
-            <p>องค์กรขนาดใหญ่ที่ดูแลความเรียบร้อยและรับงานต่างๆ ในนคร โดยแบ่งหน้าที่กันอย่างชัดเจน:</p>
+            <p>องค์กรขนาดใหญ่ที่ดูแลความเรียบร้อยและรับงานต่างๆ ในนคร โดยแบ่งหน้าที่กันอย่างชัดเจน</p>
 
-            <div class="grid-container">
-
-                <div class="data-card">
-                    <h3>Hana Association</h3>
-                    <span class="tag">Rank 1</span>
-                    <p>สมาคมอันดับหนึ่ง ผู้ดูแลและจัดลำดับความสามารถของ Fixer, สำนักงาน และสมาคมอื่นๆ ทั้งหมด</p>
+            <div class="associations-grid">
+                <!-- Hana -->
+                <div class="association-card" onclick="toggleAssociation('hana')">
+                    <div class="association-header">
+                        <h3>Hana Association</h3>
+                        <span class="expand-icon" id="hana-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="hana-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Hana Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Grade Administration - Rank 1</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สมาคมอันดับหนึ่ง ผู้ดูแลและจัดลำดับความสามารถของ Fixer สำนักงาน
+                                และสมาคมอื่นๆ ทั้งหมด มีอำนาจสูงสุดในการกำหนดเกรดและควบคุมระบบ</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Zwei Association</h3>
-                    <span class="tag">Protection</span>
-                    <p>เปรียบเสมือนตำรวจของนคร เชี่ยวชาญด้านการรักษาความปลอดภัย เป็นบอดี้การ์ด และรักษากฎหมาย</p>
+                <!-- Zwei -->
+                <div class="association-card" onclick="toggleAssociation('zwei')">
+                    <div class="association-header">
+                        <h3>Zwei Association</h3>
+                        <span class="expand-icon" id="zwei-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="zwei-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Zwei Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Protection & Security</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">เปรียบเสมือนตำรวจของนคร เชี่ยวชาญด้านการรักษาความปลอดภัย
+                                เป็นบอดี้การ์ด และรักษากฎหมาย</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Seven Association</h3>
-                    <span class="tag">Intel / Investigation</span>
-                    <p>เชี่ยวชาญด้านข้อมูลข่าวสาร การสืบสวน และการหาจุดอ่อนของศัตรู ข้อมูลคืออาวุธที่ร้ายกาจที่สุด</p>
+                <!-- Tres -->
+                <div class="association-card" onclick="toggleAssociation('tres')">
+                    <div class="association-header">
+                        <h3>Tres Association</h3>
+                        <span class="expand-icon" id="tres-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="tres-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Tres Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Technology & Engineering</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">ผู้เชี่ยวชาญด้านเทคโนโลยีและวิศวกรรม
+                                สร้างและซ่อมแซมอุปกรณ์ขั้นสูง</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Liu Association</h3>
-                    <span class="tag">Warfare</span>
-                    <p>ผู้เชี่ยวชาญด้านสงครามเต็มรูปแบบ การต่อสู้แนวหน้า และการใช้ศิลปะการต่อสู้ผสานกับไฟ</p>
+                <!-- Shi -->
+                <div class="association-card" onclick="toggleAssociation('shi')">
+                    <div class="association-header">
+                        <h3>Shi Association</h3>
+                        <span class="expand-icon" id="shi-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="shi-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Shi Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Assassination</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">องค์กรลอบสังหารที่ทำงานในเงามืด
+                                เน้นความรวดเร็วและการปลิดชีพศัตรูโดยไม่ให้รู้ตัว "ความตายนั้นเท่าเทียม"</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Shi Association</h3>
-                    <span class="tag">Assassination</span>
-                    <p>องค์กรลอบสังหารที่ทำงานในเงามืด เน้นความรวดเร็วและการปลิดชีพศัตรูโดยไม่ให้รู้ตัว
-                        "ความตายนั้นเท่าเทียม"</p>
+                <!-- Cinq -->
+                <div class="association-card" onclick="toggleAssociation('cinq')">
+                    <div class="association-header">
+                        <h3>Cinq Association</h3>
+                        <span class="expand-icon" id="cinq-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="cinq-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Cinq Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Dueling</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">ผู้เชี่ยวชาญการดวลตัวต่อตัว
+                                รับจ้างเป็นตัวแทนประลองและจัดการข้อพิพาทด้วยความเร็วและสไตล์</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Cinq Association</h3>
-                    <span class="tag">Dueling</span>
-                    <p>ผู้เชี่ยวชาญการดวลตัวต่อตัว รับจ้างเป็นตัวแทนประลองและจัดการข้อพิพาทด้วยความเร็วและสไตล์</p>
+                <!-- Liu -->
+                <div class="association-card" onclick="toggleAssociation('liu')">
+                    <div class="association-header">
+                        <h3>Liu Association</h3>
+                        <span class="expand-icon" id="liu-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="liu-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Liu Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Warfare & Flame Arts</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">ผู้เชี่ยวชาญด้านสงครามเต็มรูปแบบ การต่อสู้แนวหน้า
+                                และการใช้ศิลปะการต่อสู้ผสานกับไฟ</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Dieci Association</h3>
-                    <span class="tag">Knowledge</span>
-                    <p>สมาคมที่รวบรวมและปกป้องความรู้ ต่อสู้ด้วยหมัดและปัญญา (หรือกุญแจยักษ์) เชื่อในหลักการ
-                        "จิตใจอยู่เหนือวัตถุ"</p>
+                <!-- Seven -->
+                <div class="association-card" onclick="toggleAssociation('seven')">
+                    <div class="association-header">
+                        <h3>Seven Association</h3>
+                        <span class="expand-icon" id="seven-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="seven-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Seven Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Intelligence & Investigation</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">เชี่ยวชาญด้านข้อมูลข่าวสาร การสืบสวน และการหาจุดอ่อนของศัตรู
+                                ข้อมูลคืออาวุธที่ร้ายกาจที่สุด</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="data-card">
-                    <h3>Oufi Association</h3>
-                    <span class="tag">Execution</span>
-                    <p>ผู้ตรวจสอบพันธะสัญญาและการค้า เน้นการโจมตีที่สั่นสะเทือนถึงแก่น (Tremor)
-                        เพื่อตัดสินโทษผู้ผิดสัญญา</p>
+                <!-- Eight -->
+                <div class="association-card" onclick="toggleAssociation('eight')">
+                    <div class="association-header">
+                        <h3>Eight Association</h3>
+                        <span class="expand-icon" id="eight-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="eight-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Eight Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Cooking & Culinary Arts</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สมาคมที่เชี่ยวชาญด้านอาหารและศิลปะการประกอบอาหาร
+                                มีความเกี่ยวข้องกับธุรกิจร้านอาหารและการจัดเลี้ยง</span>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Devyat' -->
+                <div class="association-card" onclick="toggleAssociation('devyat')">
+                    <div class="association-header">
+                        <h3>Devyat' Association</h3>
+                        <span class="expand-icon" id="devyat-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="devyat-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Devyat' Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Heavy Artillery & Weapons</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">ผู้เชี่ยวชาญด้านอาวุธหนักและการทำลายล้าง
+                                ใช้อาวุธปืนและระเบิดในการปฏิบัติงาน</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dieci -->
+                <div class="association-card" onclick="toggleAssociation('dieci')">
+                    <div class="association-header">
+                        <h3>Dieci Association</h3>
+                        <span class="expand-icon" id="dieci-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="dieci-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Dieci Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Knowledge & Philosophy</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สมาคมที่รวบรวมและปกป้องความรู้ ต่อสู้ด้วยหมัดและปัญญา
+                                (หรือกุญแจยักษ์) เชื่อในหลักการ "จิตใจอยู่เหนือวัตถุ"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Öufi -->
+                <div class="association-card" onclick="toggleAssociation('oufi')">
+                    <div class="association-header">
+                        <h3>Öufi Association</h3>
+                        <span class="expand-icon" id="oufi-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="oufi-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Öufi Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Contract Enforcement & Tremor</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">ผู้ตรวจสอบพันธะสัญญาและการค้า เน้นการโจมตีที่สั่นสะเทือนถึงแก่น
+                                (Tremor) เพื่อตัดสินโทษผู้ผิดสัญญา</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Twelve -->
+                <div class="association-card" onclick="toggleAssociation('twelve')">
+                    <div class="association-header">
+                        <h3>Twelve Association</h3>
+                        <span class="expand-icon" id="twelve-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="twelve-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Association:</strong>
+                            <span class="info-value">Twelve Association</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Medical & Healthcare</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สมาคมด้านการแพทย์และการรักษา
+                                รับผิดชอบดูแลสุขภาพและช่วยเหลือผู้บาดเจ็บในนคร</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
 
+            <!-- Separator -->
+            <hr>
+
+            <!-- FIXER OFFICES SECTION -->
+            <h2>สำนักงานฟิกเซอร์ (Fixer Offices)</h2>
+            <p>สำนักงานที่รับจ้างทำงานต่างๆ ในนคร ประกอบด้วย Fixer ที่มีความสามารถหลากหลาย</p>
+
+            <div class="associations-grid">
+                <!-- MultiCrack Office -->
+                <div class="association-card" onclick="toggleAssociation('multicrack')">
+                    <div class="association-header">
+                        <h3>MultiCrack Office</h3>
+                        <span class="expand-icon" id="multicrack-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="multicrack-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Office:</strong>
+                            <span class="info-value">MultiCrack Office</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">General Operations</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สำนักงานที่รับงานทั่วไป มีประสบการณ์หลากหลาย ปรากฏใน Canto I</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fanghunt Office -->
+                <div class="association-card" onclick="toggleAssociation('fanghunt')">
+                    <div class="association-header">
+                        <h3>Fanghunt Office</h3>
+                        <span class="expand-icon" id="fanghunt-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="fanghunt-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Office:</strong>
+                            <span class="info-value">Fanghunt Office</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Bloodfiend Hunting</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สำนักงานที่เชี่ยวชาญด้านการล่า Bloodfiend ปรากฏใน Canto VII
+                                มีบทบาทสำคัญในเรื่องราวของ Sancho</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dawn Office -->
+                <div class="association-card" onclick="toggleAssociation('dawn')">
+                    <div class="association-header">
+                        <h3>Dawn Office</h3>
+                        <span class="expand-icon" id="dawn-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="dawn-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Office:</strong>
+                            <span class="info-value">Dawn Office</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Grade 2 Office - Balanced Combat</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สำนักงาน Grade 2 ที่มีความสมดุลในการต่อสู้ รู้จักกันใน Mirror
+                                World</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full-Stop Office -->
+                <div class="association-card" onclick="toggleAssociation('fullstop')">
+                    <div class="association-header">
+                        <h3>Full-Stop Office</h3>
+                        <span class="expand-icon" id="fullstop-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="fullstop-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Office:</strong>
+                            <span class="info-value">Full-Stop Office</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Grade 1 - Elite Operations</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สำนักงานระดับสูงสุด Grade 1 ที่รับจ้างแก้ปัญหายากและซับซ้อนที่สุด
+                                มีชื่อเสียงในเรื่องความสำเร็จของภารกิจและไม่เคยล้มเหลว</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hook Office -->
+                <div class="association-card" onclick="toggleAssociation('hook')">
+                    <div class="association-header">
+                        <h3>Hook Office</h3>
+                        <span class="expand-icon" id="hook-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="hook-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Office:</strong>
+                            <span class="info-value">Hook Office</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Maritime Operations</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สำนักงานที่เชี่ยวชาญด้านการปฏิบัติการทางน้ำและการต่อสู้บนเรือ
+                                รู้จักกันใน Mirror World</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Molar Office -->
+                <div class="association-card" onclick="toggleAssociation('molar')">
+                    <div class="association-header">
+                        <h3>Molar Office</h3>
+                        <span class="expand-icon" id="molar-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="molar-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Office:</strong>
+                            <span class="info-value">Molar Office</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">General Fixer Work</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">สำนักงานที่รับงาน Fixer ทั่วไป มีความเกี่ยวข้องกับ Molar Boatworks
+                                ที่ทำงานด้านการต่อเรือและซ่อมแซมยานพาหนะทางน้ำ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr>
+
+            <!-- WORKSHOPS SECTION -->
+            <h2>โรงงานและสถานประดิษฐ์ (Workshops)</h2>
+            <p>สถานที่ผลิตและดัดแปลงอาวุธ เกราะ และอุปกรณ์พิเศษต่างๆ สำหรับ Fixer และนักรบในนคร</p>
+
+            <div class="associations-grid">
+                <!-- Rosespanner Workshop -->
+                <div class="association-card" onclick="toggleAssociation('rosespanner')">
+                    <div class="association-header">
+                        <h3>Rosespanner Workshop</h3>
+                        <span class="expand-icon" id="rosespanner-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="rosespanner-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Workshop:</strong>
+                            <span class="info-value">Rosespanner Workshop</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Prosthetics & Augmentation</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">โรงงานที่ทำงานด้านชิ้นส่วนเทียมและการดัดแปลงร่างกาย
+                                ปรากฏเป็นศัตรูรองใน Canto IV
+                                เชี่ยวชาญในการผลิตและติดตั้งอุปกรณ์เสริมทางกายภาพให้กับลูกค้า</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Molar Boatworks -->
+                <div class="association-card" onclick="toggleAssociation('molarboat')">
+                    <div class="association-header">
+                        <h3>Molar Boatworks</h3>
+                        <span class="expand-icon" id="molarboat-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="molarboat-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Workshop:</strong>
+                            <span class="info-value">Molar Boatworks</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Maritime Vehicles & Repair</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">โรงงานที่เชี่ยวชาญด้านการสร้างและซ่อมแซมเรือและยานพาหนะทางน้ำ
+                                มีความเกี่ยวข้องกับ Molar Office</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Allas Workshop -->
+                <div class="association-card" onclick="toggleAssociation('allas')">
+                    <div class="association-header">
+                        <h3>Allas Workshop</h3>
+                        <span class="expand-icon" id="allas-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="allas-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Workshop:</strong>
+                            <span class="info-value">Allas Workshop</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Weapon Forging</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">โรงตีเหล็กที่ผลิตอาวุธคุณภาพสูง เชี่ยวชาญด้านดาบและอาวุธประชิด
+                                เป็นที่ยอมรับและเชื่อถือในหมู่ Fixer ทั่วนคร</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pierre's Atelier -->
+                <div class="association-card" onclick="toggleAssociation('pierre')">
+                    <div class="association-header">
+                        <h3>Pierre's Atelier</h3>
+                        <span class="expand-icon" id="pierre-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="pierre-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Workshop:</strong>
+                            <span class="info-value">Pierre's Atelier</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Body Augmentation</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span
+                                class="info-value">ห้องปฏิบัติการที่เชี่ยวชาญด้านการดัดแปลงร่างกายและติดตั้งอุปกรณ์เสริม
+                                (Prosthetics) มีความชำนาญในการผสานเทคโนโลยีเข้ากับร่างกายมนุษย์</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moses' Workshop -->
+                <div class="association-card" onclick="toggleAssociation('moses')">
+                    <div class="association-header">
+                        <h3>Moses' Workshop</h3>
+                        <span class="expand-icon" id="moses-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="moses-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Workshop:</strong>
+                            <span class="info-value">Moses' Workshop</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">E.G.O Equipment</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">โรงงานพิศดารที่ทำการประดิษฐ์และซ่อมแซมอุปกรณ์ E.G.O
+                                พร้อมทั้งวิเคราะห์เทคโนโลยีจาก Abnormalities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kōri Workshop -->
+                <div class="association-card" onclick="toggleAssociation('kori')">
+                    <div class="association-header">
+                        <h3>Kōri Workshop</h3>
+                        <span class="expand-icon" id="kori-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="kori-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Workshop:</strong>
+                            <span class="info-value">Kōri Workshop</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Unknown</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">โรงงานที่ถูกกล่าวถึงในเกม
+                                แต่ยังไม่มีข้อมูลรายละเอียดเกี่ยวกับความเชี่ยวชาญหรือการดำเนินงาน</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr>
+
+            <!-- SYNDICATES SECTION -->
+            <h2>กลุ่มอาชญากร (Syndicates)</h2>
+            <p>องค์กรที่ทำงานอย่างไม่ถูกกฎหมายในตรอก ไม่ได้รับการควบคุมเหมือนสำนักงาน Fixer
+                มีทั้งกลุ่มเล็กและกลุ่มใหญ่ที่มีอิทธิพลทั่วนคร</p>
+
+            <h3 style="margin: 30px 0 15px 0; font-size: 1.2em;">The Five Fingers</h3>
+            <p style="margin-bottom: 20px; color: #aaa;">องค์กรอาชญากรรมขนาดใหญ่ 5 กลุ่มที่มีอำนาจมากที่สุดในนคร</p>
+
+            <div class="associations-grid">
+                <!-- The Thumb -->
+                <div class="association-card" onclick="toggleAssociation('thumb')">
+                    <div class="association-header">
+                        <h3>The Thumb</h3>
+                        <span class="expand-icon" id="thumb-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="thumb-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">The Thumb</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Large-scale Criminal Operations</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">หนึ่งใน Five Fingers องค์กรอาชญากรรมขนาดใหญ่ที่มีอิทธิพลทั่วนคร
+                                มีเครือข่ายกว้างขวางและมีสมาชิกจำนวนมาก</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Index -->
+                <div class="association-card" onclick="toggleAssociation('index')">
+                    <div class="association-header">
+                        <h3>The Index</h3>
+                        <span class="expand-icon" id="index-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="index-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">The Index</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Proxy Operations</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">หนึ่งใน Five Fingers
+                                ที่มีชื่อเสียงในด้านการใช้ตัวแทนและการดำเนินการลับ
+                                มีระบบการจัดการที่ซับซ้อนและมีประสิทธิภาพ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Middle -->
+                <div class="association-card" onclick="toggleAssociation('middle')">
+                    <div class="association-header">
+                        <h3>The Middle</h3>
+                        <span class="expand-icon" id="middle-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="middle-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">The Middle</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Organized Crime</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">หนึ่งใน Five Fingers
+                                กลุ่มอาชญากรที่มีความสัมพันธ์กับตัวละครหลายคนในเกม มีบทบาทสำคัญในเรื่องราวของ
+                                Ishmael</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Ring -->
+                <div class="association-card" onclick="toggleAssociation('ring')">
+                    <div class="association-header">
+                        <h3>The Ring</h3>
+                        <span class="expand-icon" id="ring-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="ring-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">The Ring</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Fighting Rings & Gladiatorial Combat</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">หนึ่งใน Five Fingers
+                                ที่เชี่ยวชาญด้านการจัดการแข่งขันต่อสู้และเวทีกลาดิเอเตอร์
+                                มีธุรกิจที่เกี่ยวข้องกับความรุนแรงและการพนัน</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Pinky -->
+                <div class="association-card" onclick="toggleAssociation('pinky')">
+                    <div class="association-header">
+                        <h3>The Pinky</h3>
+                        <span class="expand-icon" id="pinky-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="pinky-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">The Pinky</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Trafficking & Illegal Trade</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">หนึ่งใน Five Fingers ที่โด่งดังในด้านการค้ามนุษย์และการค้าผิดกฎหมาย
+                                มีเครือข่ายที่แผ่ขยายไปถึง Outskirts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin: 40px 0 15px 0; font-size: 1.2em;">กลุ่มอาชญากรอื่นๆ</h3>
+            <p style="margin-bottom: 20px; color: #aaa;">องค์กรอาชญากรรมอื่นๆ ที่มีชื่อเสียงในนคร</p>
+
+            <div class="associations-grid">
+                <!-- Yurodiviye -->
+                <div class="association-card" onclick="toggleAssociation('yurodiviye')">
+                    <div class="association-header">
+                        <h3>Yurodiviye</h3>
+                        <span class="expand-icon" id="yurodiviye-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="yurodiviye-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">Yurodiviye</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Gambling & Extortion</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">กลุ่มอาชญากรที่เกี่ยวข้องกับ Rodion มีธุรกิจการพนันและการกรรโชก
+                                มีวัฒนธรรมที่เน้นความภักดีแบบครอบครัว</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blade Lineage -->
+                <div class="association-card" onclick="toggleAssociation('blade')">
+                    <div class="association-header">
+                        <h3>Blade Lineage</h3>
+                        <span class="expand-icon" id="blade-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="blade-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">Blade Lineage</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Swordsmanship & Martial Arts</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">กลุ่มนักดาบที่สืบทอดเทคนิคการต่อสู้มาหลายชั่วอายุคน
+                                มีสายเลือดและวัฒนธรรมการต่อสู้ที่ยึดมั่น นำโดย Bamboo-hatted Kim</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kurokumo Clan -->
+                <div class="association-card" onclick="toggleAssociation('kurokumo')">
+                    <div class="association-header">
+                        <h3>Kurokumo Clan</h3>
+                        <span class="expand-icon" id="kurokumo-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="kurokumo-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">Kurokumo Clan</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Assassination & Stealth</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">กลุ่มนักฆ่าที่ทำงานในเงามืด
+                                เชี่ยวชาญด้านการลอบสังหารและการต่อสู้แบบซามูไร มีวัฒนธรรมญี่ปุ่นแบบดั้งเดิม</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dead Rabbits -->
+                <div class="association-card" onclick="toggleAssociation('deadrabbits')">
+                    <div class="association-header">
+                        <h3>Dead Rabbits</h3>
+                        <span class="expand-icon" id="deadrabbits-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="deadrabbits-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">Dead Rabbits</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Street Gang Operations</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">แก๊งอาชญากรที่มีบทบาทในเรื่องราวของ Heathcliff
+                                มีการแข่งขันและความขัดแย้งกับกลุ่มอื่นๆ ในพื้นที่</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Twinhook Pirates -->
+                <div class="association-card" onclick="toggleAssociation('twinhook')">
+                    <div class="association-header">
+                        <h3>Twinhook Pirates</h3>
+                        <span class="expand-icon" id="twinhook-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="twinhook-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">Twinhook Pirates</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Maritime Crime & Piracy</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">กลุ่มโจรสลัดที่ทำงานในพื้นที่ทางน้ำ
+                                มีเอกลักษณ์และวัฒนธรรมแบบโจรสลัด นำโดย Hook และ First Mate Smee</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Los Mariachis -->
+                <div class="association-card" onclick="toggleAssociation('mariachis')">
+                    <div class="association-header">
+                        <h3>Los Mariachis</h3>
+                        <span class="expand-icon" id="mariachis-icon">▼</span>
+                    </div>
+                    <div class="association-preview">Click to read more...</div>
+                    <div class="association-content" id="mariachis-content" style="display: none;">
+                        <div class="info-row">
+                            <strong class="info-label">Syndicate:</strong>
+                            <span class="info-value">Los Mariachis</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Specialization:</strong>
+                            <span class="info-value">Music & Combat</span>
+                        </div>
+                        <div class="info-row">
+                            <strong class="info-label">Description:</strong>
+                            <span class="info-value">กลุ่มอาชญากรที่มีเอกลักษณ์ผสมผสานดนตรีและการต่อสู้
+                                มีวัฒนธรรมเม็กซิกัน นำโดย Aida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
+
+    <script>
+        function toggleAssociation(assocId) {
+            const content = document.getElementById(assocId + '-content');
+            const icon = document.getElementById(assocId + '-icon');
+
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
 </body>
 
 </html>

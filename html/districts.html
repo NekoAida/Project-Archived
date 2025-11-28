@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Districts - Project Archived</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../pic/Project Archive.jpg">
+</head>
+
+<body>
+    <header>
+        <h1>PROJECT ARCHIVED</h1>
+        <p class="subtitle">Book, Distortion, Star And City</p>
+    </header>
+
+    <nav class="menu-nav">
+        <div class="menu-container">
+            <a href="index.html" class="menu-btn">
+                <span class="btn-icon">🏠</span>
+                <span class="btn-text">Main</span>
+            </a>
+            <a href="about.html" class="menu-btn">
+                <span class="btn-icon">📂</span>
+                <span class="btn-text">About Project</span>
+            </a>
+            <a href="associations.html" class="menu-btn">
+                <span class="btn-icon">🏛️</span>
+                <span class="btn-text">Associations</span>
+            </a>
+            <a href="the-wing.html" class="menu-btn">
+                <span class="btn-icon">🏙️</span>
+                <span class="btn-text">The Wings</span>
+            </a>
+            <a href="districts.html" class="menu-btn">
+                <span class="btn-icon">🗺️</span>
+                <span class="btn-text">Districts</span>
+            </a>
+            <a href="detail.html" class="menu-btn">
+                <span class="btn-icon">📋</span>
+                <span class="btn-text">Detail</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="archive-container">
+        <section class="content-section active">
+            <div class="section-header">DATABASE // DISTRICTS</div>
+            <h2>Districts (26 เขตของ The City)</h2>
+
+            <div class="intro-box">
+                <h3>🗺️ เกี่ยวกับ Districts</h3>
+                <p>
+                    The City ถูกแบ่งออกเป็น <strong>26 เขตขนาดมหึมา (Districts)</strong> แต่ละเขตถูกปกครองโดย Wing
+                    และมีวัฒนธรรม นโยบาย และทัศนียภาพที่แตกต่างกันไปอย่างสิ้นเชิง
+                </p>
+                <p>
+                    Districts ถูกแบ่งออกเป็น 4 ภูมิภาค (เหนือ ใต้ ตะวันออก ตะวันตก)
+                    ซึ่ง Districts ที่อยู่ในภูมิภาคเดียวกันมักจะมีลักษณะร่วมกัน เช่น สภาพภูมิอากาศหรือการแต่งกาย
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <p>⚠️ <strong>โครงสร้าง District:</strong> แต่ละ District แบ่งออกเป็น 2 ส่วน</p>
+                <ul class="feature-list" style="margin-top: 10px;">
+                    <li><strong>Nest:</strong> พื้นที่ที่ปกครองโดย Wing - ปลอดภัย คุณภาพชีวิตดี</li>
+                    <li><strong>Backstreets:</strong> สลัมที่เต็มไปด้วยอันตราย Syndicates และอาชญากรรม</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">📍 Districts ที่ทราบข้อมูล</h3>
+            <p class="section-desc">Districts ที่ปรากฏในเกม Limbus Company และ Library of Ruina</p>
+
+            <div class="wing-grid">
+                <!-- District 4 (D Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 4</h3>
+                        <span class="wing-letter">4</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> D Corp.</p>
+                        <p><strong>Featured in:</strong> Prologue: Selva Oscura, Canto I: The Outcast</p>
+                        <p class="wing-desc">
+                            <strong>Backstreets:</strong> ดูทรุดโทรมและมืดมน มีประชากรสมาชิก Old G Corp.
+                            และพวกนักเลงระดับล่างจำนวนมาก
+                            อยู่ในป่าเมืองที่กำลังเสื่อมโทรม<br><br>
+                            มีป่ามืดมิดอยู่ที่ไหนสักแห่งใน District นี้ ซึ่งเป็นที่ที่ Dante พบกับ Panther, Wolf และ
+                            Lion ครั้งแรก
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 8 (H Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 8</h3>
+                        <span class="wing-letter">8</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> H Corp. (Hongyuan Bioengineering Group)</p>
+                        <p><strong>Featured in:</strong> Intervallo V, Canto VIII, Intervallo VI</p>
+                        <p class="wing-desc">
+                            <strong>Hongyuan Complex:</strong> เกือบทั้ง District 8 ประกอบด้วย "Hongyuan Complex"
+                            สิ่งก่อสร้างขนาดมหึมาที่ครอบคลุมทั้ง Backstreets และ Nest<br><br>
+
+                            <strong>โครงสร้างพิเศษ:</strong> อาคารภายใน Complex จะเคลื่อนที่และเปลี่ยนตำแหน่งเป็นระยะๆ
+                            ทำให้ขนาดของที่ดินเปลี่ยนแปลงและสร้างเขาวงกตซับซ้อน
+                            การปรับโครงสร้างขึ้นอยู่กับมูลค่าทรัพย์สินสุทธิของผู้อยู่อาศัย<br><br>
+
+                            <strong>สภาพแวดล้อม:</strong> Backstreets ส่วนใหญ่เป็นอาคารแน่นขนัด ส่วน Nest
+                            ตรงกลางมีเจดีย์หลังคาสีแดงเลือดนกขนาดมหึมา<br><br>
+
+                            <strong>วัฒนธรรม:</strong> ให้ความสำคัญกับสถานะของชนชั้นนำหรือการทำงานในราชสำนัก
+                            ปัจจุบัน Jia Family ถือครองอำนาจส่วนใหญ่ มีการจัด Family Hierarchy Examinations
+                            ซึ่งผู้คนจะถูกเกิดและเลี้ยงดูเพื่อเข้าร่วม<br><br>
+
+                            <strong>Singularity Effects:</strong> ชาวเมืองหลายคนพึ่งพา Boluses ที่ผลิตโดย Singularity
+                            ของ H Corp.
+                            ทำให้มีประชากรกลายพันธุ์จำนวนมากที่เรียกว่า "regulars"
+                            District นี้ยังมี Life Insurance technology ที่สามารถฟื้นคืนชีพผู้คนได้<br><br>
+
+                            <strong>ด้านมืด:</strong> ผู้ถูกลงโทษของ Hongyuan ถูกทำเครื่องหมายว่าเป็น "failures"
+                            และมักถูกใช้ในการทดสอบผลิตภัณฑ์ที่ผลิตใน District
+                            การสังหารหมู่ครอบครัว Kong ถูกใช้เป็นตัวอย่างของความหยิ่งผยองอย่างสุดขีด
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 9 (I Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 9</h3>
+                        <span class="wing-letter">9</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> I Corp.</p>
+                        <p><strong>Featured in:</strong> Library of Ruina (The Pianist)</p>
+                        <p class="wing-desc">ข้อมูลจำกัด ปรากฏใน Library of Ruina</p>
+                    </div>
+                </div>
+
+                <!-- District 10 (J Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 10</h3>
+                        <span class="wing-letter">10</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> J Corp.</p>
+                        <p><strong>Nickname:</strong> "Nest แห่งการพนัน"</p>
+                        <p><strong>Featured in:</strong> Canto II: The Unloving</p>
+                        <p class="wing-desc">
+                            <strong>วัฒนธรรม:</strong> District นี้มีชื่อเสียงในเรื่องที่โชคลาภครอบงำชีวิตประจำวัน
+                            การตัดสินใจและคุณค่าของผู้คนถูกกำหนดโดย "Fortune Wheels" แบบสุ่ม<br><br>
+
+                            <strong>Syndicates:</strong> หลาย Syndicates มีอำนาจในระดับสูงใน Backstreets ของ District 10
+                            เช่น
+                            Los Mariachis, Yurodiviye, Tingtang Gang และ Tieqiu Crew<br><br>
+
+                            <strong>สภาพแวดล้อม:</strong> Backstreets มีคาสิโนขนาดใหญ่เป็นศูนย์กลางของสถานที่สำคัญ
+                            แต่โดยทั่วไปแล้วค่อนข้างทรุดโทรม
+                            มีสถานที่เช่นลานขยะที่ตั้งอยู่ติดกับทางเข้าคาสิโนที่ดูแลดี<br><br>
+
+                            <strong>ความร่วมมือ:</strong> เนื่องจากพึ่งพาการพนัน Öufi Association
+                            จึงเป็นผู้ร่วมมือบ่อยครั้งกับ Offices มากมายที่มีอยู่<br><br>
+
+                            <strong>ระบบเศรษฐกิจ:</strong> วัฒนธรรมของ District พึ่งพาการไหลของเงินจากการพนัน
+                            โครงการเหมืองใต้ดินและโครงการอื่นๆ ใช้แรงงานทาสจากผู้ที่ไม่สามารถชำระหนี้มหาศาลได้
+                            การให้ความสำคัญนี้สร้างความเครียดอย่างมากต่อแนวคิดเรื่องความเป็นธรรม
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 11 (K Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 11</h3>
+                        <span class="wing-letter">11</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> K Corp.</p>
+                        <p><strong>Product:</strong> Ampules (ยารักษา)</p>
+                        <p><strong>Featured in:</strong> Canto III, IV, Intervallo I</p>
+                        <p class="wing-desc">
+                            <strong>เทคโนโลยี:</strong> มีชื่อเสียงในการผลิต Ampules ขวดยารักษาขนาดเล็กที่ผลิตโดย
+                            Singularity ของ K Corp.
+                            District นี้มีเทคโนโลยีก้าวหน้าโดดเด่น ส่วนใหญ่มีลักษณะทันสมัยและล้ำสมัย<br><br>
+
+                            <strong>ความปลอดภัย:</strong> ถือว่าเป็นหนึ่งใน Nest ที่ปลอดภัยที่สุด
+                            การเข้าต้องใช้เอกสารจำนวนมากและมีการตรวจสอบความปลอดภัยที่จุดตรวจอย่างต่อเนื่อง
+                            เพราะเหตุนี้ Backstreets จึงมีพวกอาชญากรมากมายที่พยายามขโมยวีซ่าเพื่อเข้า<br><br>
+
+                            <strong>Calw:</strong> บ้านเกิดของ Sinclair ตั้งอยู่ใน K Corp.
+                            แม้ว่า Calw จะอยู่ท่ามกลางป่า แต่ยังคงเชื่อมโยงกับ K Corp.
+                            เนื่องจากเป็นสังคมที่มีเทคโนโลยีสูง
+                            มี Lobotomy Corp. Branch อยู่ใต้เมืองเล็กๆ นี้<br><br>
+
+                            <strong>วัฒนธรรมการทำงาน:</strong> วัฒนธรรมของ District
+                            พึ่งพาชั่วโมงทำงานที่หนักหน่วงสำหรับคนใน Nest
+                            โดยเฉพาะ K Corp. Feathers มีความเสี่ยงสูงที่จะทำงานหลายสัปดาห์และความไม่มั่นคงของงาน
+                            เนื่องจากวัฒนธรรมการทำงานที่หมดแรงนี้ จึงมีการจารกรรมองค์กรระหว่างธุรกิจคู่แข่งจำนวนมาก
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 12 (Former L Corp.) -->
+                <div class="wing-card former">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 12</h3>
+                        <span class="wing-letter">12</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Former Wing:</strong> L Corp. (Lobotomy Corporation)</p>
+                        <p><strong>Status:</strong> ล่มสลายแล้ว - พื้นที่พิพาท</p>
+                        <p><strong>Featured in:</strong> Library of Ruina, Limbus Company</p>
+                        <p class="wing-desc">
+                            <strong>หลังการล่มสลาย:</strong> หลังจาก Wing ล่มสลาย District
+                            นี้กลายเป็นพื้นที่พิพาทที่ฝ่ายต่างๆ มากมายต่อสู้กัน
+                            โดยมี The Library อยู่ตรงกกลาง<br><br>
+
+                            <strong>Branches:</strong> ก่อนล่มสลาย District นี้ทำให้เกิด Branches ในหลาย District อื่นๆ
+                            ใช้เพื่อกระจายพลังงานไปยัง Wings อื่นๆ
+                            ปัจจุบันหลายแห่งเก็บ Golden Boughs และเทคโนโลยีที่ถูกทิ้งไว้<br><br>
+
+                            <strong>สถานะปัจจุบัน:</strong> ไม่ทราบแน่ชัด
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 13 (M Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 13</h3>
+                        <span class="wing-letter">13</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> M Corp. (MDM Entreprise)</p>
+                        <p><strong>Product:</strong> Moonlight Stones</p>
+                        <p class="wing-desc">
+                            <strong>Singularity:</strong> ผลิต Moonlight Stones
+                            ซึ่งปกป้องผู้สวมใส่จากความเสียหายทางจิตใจ<br><br>
+
+                            <strong>สถานที่สำคัญ:</strong> มี Abyss Trauma Correctional Facility ตั้งอยู่ที่นี่
+                            Catherine ได้ลงทะเบียนให้น้องชายของเธอ Hindley เข้าที่นี่<br><br>
+
+                            <strong>ผู้ใช้งาน:</strong> Liu Association รวมถึง Fixers และ Syndicates
+                            ทั่วไปเป็นที่รู้จักในการใช้ผลิตภัณฑ์ของ Wing นี้<br><br>
+
+                            <strong>บริการอื่นๆ:</strong> M Corp. ยังให้ความช่วยเหลือ Districts อื่นๆ
+                            ผ่านการใช้งาน Fixers ที่รับจ้างและได้รับการสนับสนุนจาก District อย่างน้อยหนึ่งกลุ่ม
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 14 (N Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 14</h3>
+                        <span class="wing-letter">14</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> N Corp. (Nagel und Hammer)</p>
+                        <p><strong>Philosophy:</strong> มนุษย์เหนือสิ่งอื่นใด</p>
+                        <p class="wing-desc">
+                            <strong>สภาพแวดล้อม:</strong> District
+                            ที่มีชื่อเสียงในการส่งเสริมผู้ที่แสวงหาประสบการณ์ของมนุษย์
+                            เป็น District สีขาวที่ประกอบด้วยอาคารธรรมดาๆ<br><br>
+
+                            <strong>การศึกษา:</strong> มีความสำเร็จสูงในแผนกการศึกษา
+                            และมีสินค้าที่น่าสะพรึงกลัวอย่างเฉพาะเจาะจง เช่น Suicide Booths<br><br>
+
+                            <strong>ปรัชญา:</strong> ปรัชญาเฉพาะเกี่ยวกับชีวิตและคุณค่าของมนุษย์ได้ก่อให้เกิดกลุ่มเช่น
+                            New League of Nine Littérateurs และ N Corp. Inquisition<br><br>
+
+                            <strong>ความเชื่อ:</strong>
+                            เชื่อว่าความเจ็บปวดและความทุกข์ทรมานเป็นสิ่งจำเป็นต่อการดำรงอยู่ของมนุษย์
+                            N Corp. Inquisition มีเป้าหมายที่จะกำจัดผู้ใช้ Prosthetics
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 16 (P Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 16</h3>
+                        <span class="wing-letter">16</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> P Corp.</p>
+                        <p><strong>Style:</strong> Art Deco</p>
+                        <p><strong>Featured in:</strong> Canto VII: The Dream Ending</p>
+                        <p class="wing-desc">
+                            <strong>สถาปัตยกรรม:</strong> อาคารใน District นี้มีความยืดหยุ่นและทนทานสูงเนื่องจาก
+                            Singularity ของ P Corp.
+                            มีสไตล์ Art Deco<br><br>
+
+                            <strong>La Manchaland:</strong> Backstreets เคยเป็นบ้านของ La Manchaland
+                            สวนสนุกขนาดมหึมาที่สร้างจากเลือดซึ่งถูกครอบครองโดยครอบครัว Bloodfiends
+                            มีชื่อเสียงในการปรากฏและหายไปในช่วงเวลาปกติรอบ District<br><br>
+
+                            <strong>วัฒนธรรม:</strong> วัฒนธรรมของ District ยังไม่ทราบแน่ชัด
+                            แต่มีเรื่องราวเกี่ยวกับการสร้าง Singularity ของ District โดย Chief Executive
+                            เป็นที่รู้จักกันอย่างแพร่หลายในหมู่ประชากร
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 17 (Q Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 17</h3>
+                        <span class="wing-letter">17</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> Q Corp.</p>
+                        <p><strong>Connection:</strong> The Pinky</p>
+                        <p class="wing-desc">
+                            District 17 มีนัยว่าเป็นที่ตั้งของสถานที่ที่เกี่ยวข้องกับ The Pinky
+                            ซึ่ง Kong Qiu วางแผนจะเดินทางไปหลังจากเหตุการณ์ใน Canto VIII<br><br>
+
+                            ข้อมูลเพิ่มเติมจำกัด
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 18 (R Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 18</h3>
+                        <span class="wing-letter">18</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> R Corp.</p>
+                        <p><strong>Specialty:</strong> Military & Cloning</p>
+                        <p class="wing-desc">
+                            <strong>สถาปัตยกรรม:</strong> สถาปัตยกรรมของ District ไม่มีความคล้ายคลึงกับ Districts
+                            ข้างเคียง
+                            แต่กลับคล้ายกับ District 23
+                            ห้องทดลองภายในมีผนังโลหะสีเข้มพร้อมไฮไลท์สีส้ม มีพื้นที่ภายในที่คล้ายป่าที่เรียกว่า
+                            Hatcheries
+                            ซึ่งเป็นที่โคลนทหาร R Corp.<br><br>
+
+                            <strong>เศรษฐกิจ:</strong> District พึ่งพารายได้ที่ได้รับจากการเป็นพันธมิตรกับ Wings อื่นๆ
+                            โดยเฉพาะความร่วมมือกับ Lobotomy Corporation ในอดีต
+                            นับตั้งแต่พันธมิตร Wing นี้ล่มสลาย มันถูกบอกเป็นนัยว่าเผชิญปัญหาทางการเงิน<br><br>
+
+                            <strong>งานทหาร:</strong> ทำงานบ่อยครั้งในฐานะทหารรับจ้างและกองทัพเอกชน
+                            ใช้ Singularity เพื่อสร้างกองทัพที่ทรงพลังซึ่งเข้าร่วมในเหตุการณ์ต่างๆ เช่น Smoke War
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 19 (S Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 19</h3>
+                        <span class="wing-letter">19</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> S Corp. (Salpippyeo Agroindustries)</p>
+                        <p><strong>Government:</strong> Feudal Aristocracy</p>
+                        <p><strong>Style:</strong> Korean-inspired (Joseon period)</p>
+                        <p class="wing-desc">
+                            <strong>ลักษณะการพูด:</strong> ชาวพื้นเมืองของ District
+                            นี้เป็นที่รู้จักในเรื่องความฟุ่มเฟือยในการพูด<br><br>
+
+                            <strong>การปกครอง:</strong> District ถูกปกครองโดยระบบศักดินาชนชั้นสูง
+                            เจ้าหน้าที่ในปีที่ผ่านมาเป็นที่รู้จักในเรื่องการกระทำที่ทุจริต
+                            ปล่อยให้ Syndicates ที่รุนแรงเช่น Kurokumo Clan เข้ายึดครองดินแดน<br><br>
+
+                            <strong>บทบาทพิเศษ:</strong> มีการยอมรับบทบาทเฉพาะใน District เช่น
+                            "Blade of Clouds" (ตำแหน่งที่มอบให้กับนักดาบที่ดีที่สุดใน Nest)
+                            และ Ch'unokkun (กลุ่มนักล่าที่แกร่งกล้าภายใต้บัญชาของ Royal Court)<br><br>
+
+                            <strong>สถาปัตยกรรม:</strong> District มีสถาปัตยกรรมที่ได้รับแรงบันดาลใจจากเกาหลี
+                            โดยเฉพาะออกแบบตามยุค Joseon
+                            District แทบไม่เคยถูกแสดงในเกม
+                            ปรากฏเฉพาะในยามค่ำคืนที่ส่องสว่างด้วยแสงจันทร์เท่านั้น<br><br>
+
+                            <strong>ปัญหาปัจจุบัน:</strong> District ยังคงอยู่ในภาวะความขัดแย้ง ณ เวลาของ Limbus Company
+                            มีอัตราการอพยพออกสูงของชาวพื้นเมืองท่ามกลางความวุ่นวายจากการทุจริตของเจ้าหน้าที่
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 20 (T Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 20</h3>
+                        <span class="wing-letter">20</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> T Corp. (TimeTrack Corporation)</p>
+                        <p><strong>Featured in:</strong> Intervallo III, IV, Canto VI</p>
+                        <p><strong>Theme:</strong> Time Manipulation</p>
+                        <p class="wing-desc">
+                            <strong>ฟิลเตอร์สีซีเปีย:</strong> ทั้ง District ถูกปกคลุมด้วยฟิลเตอร์สีซีเปีย
+                            ทำให้สีของทุกสิ่งใน District หมดไป
+                            แต่ประชาชนสามารถซื้อสีกลับคืนมาได้ แม้ว่าจะเป็นกระบวนการที่แพงมาก<br><br>
+
+                            <strong>วัฒนธรรม:</strong> ถือว่าเป็นบ้านของนักประดิษฐ์และคนสร้างสรรค์มากมาย
+                            แม้แต่สมาชิกชั้นสูงของ District นี้ก็เข้าร่วมการประดิษฐ์<br><br>
+
+                            <strong>เชื่อมโยง Nest-Backstreets:</strong> วัฒนธรรมของ District
+                            เชื่อมโยงกันอย่างเฉพาะเจาะจงระหว่าง Backstreets และ Nest
+                            โดย Time Collectors เข้าไปในที่พักใน Backstreets บ่อยครั้งเพื่อเก็บ Time Tax
+                            หรือมองหาสิ่งประดิษฐ์ที่ไม่ได้จดทะเบียน<br><br>
+
+                            <strong>การจัดการเวลา:</strong> เนื่องจากแนวทางปฏิบัติของ T Corp.
+                            ประชาชนจำนวนมากใช้ชีวิตในกรอบเวลาที่แตกต่างกัน
+                            บางคนมีเวลามากกว่าหรือน้อยกว่าคนอื่น
+                            มีหอนาฬิกาขนาดมหึมา 12 แห่งในแต่ละส่วนของ District
+                            ทำหน้าที่เป็นวิธีที่ผู้คนจะติดตามความคืบหน้าที่แท้จริงของเวลา<br><br>
+
+                            <strong>ปัญหาสังคม:</strong> แม้ว่าคนร่ำรวยจะอาศัยอยู่อย่างสบายเป็นพิเศษ
+                            District ก็เต็มไปด้วยปัญหาในหมู่ประชากรทั่วไป
+                            มีการต่อสู้มากมายใน Backstreets และการปฏิบัติที่ไม่มีจริยธรรม
+                            เช่น การเป็นทาสเด็กเป็นเรื่องธรรมดา<br><br>
+
+                            <strong>การต่อต้าน:</strong> ผลจากปัญหานี้ เซลล์ของสมาชิก Yurodiviye ได้ก่อตั้งขึ้นภายใน
+                            Nest ของ District
+                            โดยมุ่งหวังที่จะต่อสู้กับสถานะที่ประชากรติดอยู่<br><br>
+
+                            <strong>ผู้อพยพ:</strong> ผู้อพยพจำนวนมากมาที่ District จาก District 19
+                            เช่น ประชากรส่วนใหญ่ของ League of Nine Littérateurs และ Blade Lineage Syndicate
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 21 (U Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 21</h3>
+                        <span class="wing-letter">21</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> U Corp.</p>
+                        <p><strong>Location:</strong> The Great Lake</p>
+                        <p><strong>Featured in:</strong> Intervallo II: S.E.A., Canto V: The Evil Defining</p>
+                        <p class="wing-desc">
+                            <strong>The Great Lake:</strong> ภายในทะเลสาบนี้มีสัตว์ขนาดยักษ์ที่เป็นปรสิตที่เรียกว่า
+                            Whales
+                            พร้อมกับ "The Five Calamities" - Whales หลักห้าตัวที่เดินทางได้อย่างอิสระ<br><br>
+
+                            <strong>โครงสร้าง:</strong> สถาปัตยกรรมและสุนทรียภาพของ District
+                            แตกต่างกันอย่างมากระหว่างแต่ละส่วนของ Great Lake
+                            Backstreets ตั้งอยู่บนห้า "Portships" ขนาดมหึมา
+                            - คอลเลกชันอาคารเคลื่อนที่ที่เชื่อมต่อกันผ่าน Singularity ของ Wing
+                            หนึ่งในนั้นคือ Marlin Portship ซึ่งเป็นหนึ่งในพื้นที่กลางที่ปรากฏใน Canto V<br><br>
+
+                            <strong>Syndicates:</strong> การมีอยู่ของ Syndicates อันตรายแพร่หลายทั่ว District
+                            โดยกลุ่มเช่น Twinhook Pirates จับนักท่องเที่ยวเป็นตัวประกันในแผนการเรียกค่าไถ่
+                            ทำให้การเดินทางเพียงลำพังหรือไม่มีการป้องกันเป็นอันตรายอย่างยิ่ง<br><br>
+
+                            <strong>การท่องเที่ยว:</strong> เนื่องจากสินค้าพิเศษในหมู่ Districts เช่น ไอศกรีมรสนางเงือก
+                            จึงเป็นที่นิยมในหมู่ผู้มาเยือนที่ต้องการสัมผัสวัฒนธรรม
+                            แม้ว่าสถานที่ส่วนใหญ่จะถูกสร้างขึ้นเป็นกับดักนักท่องเที่ยว<br><br>
+
+                            <strong>การค้า:</strong> District ยังจัดการสินค้าส่งออกจำนวนสูง
+                            เช่น อาหารกระป๋องที่เก็บรักษาผ่าน Singularity ของ Wing<br><br>
+
+                            <strong>สัตว์ประหลาด:</strong> ในหมู่ Backstreets สัตว์ประหลาดเช่น Trash Crabs
+                            แอบซ่อนตัวอยู่
+                            กลายเป็นเหยื่อของกลุ่มเช่น Molar Boatworks
+                            แม้จะมีรูปลักษณ์ที่น่ากลัว แต่ก็มีสินค้าเช่นไวน์ Trash Crab ที่ถูกสร้างจากพวกมัน
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 22 (V Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 22</h3>
+                        <span class="wing-letter">22</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> V Corp.</p>
+                        <p><strong>Notable Residents:</strong> Vergilius, Dawn Office</p>
+                        <p class="wing-desc">
+                            Vergilius และ Dawn Office ต่างตั้งอยู่ในพื้นที่ Nest ของ V Corp.<br><br>
+                            ข้อมูลเพิ่มเติมจำกัด
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 23 (W Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 23</h3>
+                        <span class="wing-letter">23</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> W Corp. (WARP Corp.)</p>
+                        <p><strong>Service:</strong> WARP Trains</p>
+                        <p class="wing-desc">
+                            District ที่ดูแลระบบขนส่ง WARP Train ที่สามารถเทเลพอร์ตผู้โดยสารข้าม Districts
+                            ได้ทันที<br><br>
+
+                            <strong>Limbus Company:</strong> Limbus Company มีฐานที่ตั้งอยู่ในเขตนี้
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 24 (X Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 24</h3>
+                        <span class="wing-letter">24</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> X Corp.</p>
+                        <p><strong>Nickname:</strong> "Hellholes"</p>
+                        <p class="wing-desc">
+                            แร่ธาตุถูกสกัดจากเหมืองภายในเขต 24 ซึ่งถูกขนานนามว่า "หลุมนรก" (Hellholes)
+                            เพื่อสร้างโลหะผสมที่ทนทานสูงเป็นพิเศษ<br><br>
+
+                            การใช้งานถูกควบคุมภายใต้ข้อจำกัดที่เข้มงวด
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 25 (Y Corp.) -->
+                <div class="wing-card">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 25</h3>
+                        <span class="wing-letter">25</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> Y Corp.</p>
+                        <p><strong>Notable Residents:</strong> Rodion, Sonya</p>
+                        <p class="wing-desc">
+                            บ้านเกิดของ Rodion และ Sonya<br><br>
+                            ข้อมูลเพิ่มเติมจำกัด
+                        </p>
+                    </div>
+                </div>
+
+                <!-- District 26 (Mystery) -->
+                <div class="wing-card" style="opacity: 0.6; border-style: dashed;">
+                    <div class="wing-header" onclick="toggleWing(this)">
+                        <h3>District 26</h3>
+                        <span class="wing-letter">?</span>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="wing-content">
+                        <p><strong>Wing:</strong> Z Corp. (?)</p>
+                        <p><strong>Status:</strong> ยืนยันว่ามีอยู่ แต่ไม่ปรากฏในแผนที่</p>
+                        <p class="wing-desc">
+                            <strong>ความลึกลับ:</strong> District 26 ได้รับการยืนยันว่ามีอยู่จริง
+                            แต่ไม่ปรากฏในแผนที่ใดๆ ที่เคยเห็น<br><br>
+
+                            ข้อมูลทั้งหมดเป็นความลึกลับ Wing ที่ปกครอง District นี้ยังไม่เป็นที่ทราบ
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-box" style="margin-top: 60px;">
+                <h3>📊 สถิติ Districts</h3>
+                <ul class="feature-list">
+                    <li><strong>Districts ทั้งหมด:</strong> 26 Districts</li>
+                    <li><strong>Districts ที่ทราบข้อมูล:</strong> 17+ Districts</li>
+                    <li><strong>โครงสร้าง:</strong> แต่ละ District = Nest (ปลอดภัย) + Backstreets (อันตราย)</li>
+                    <li><strong>ภูมิภาค:</strong> 4 Quadrants (North, South, East, West)</li>
+                    <li><strong>การปกครอง:</strong> แต่ละ District ถูกปกครองโดย Wing หนึ่งแห่ง</li>
+                    <li><strong>District 26:</strong> ยืนยันว่ามีอยู่ แต่ไม่เคยปรากฏในแผนที่</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 20px;">
+                <p>💡 <strong>เพิ่มเติม:</strong> สำหรับข้อมูลเพิ่มเติมและรายละเอียดที่อัพเดทล่าสุด
+                    โปรดเยี่ยมชม <a href="https://limbuscompany.wiki.gg/wiki/Districts" target="_blank"
+                        style="color: #ffc107;">Limbus Company Wiki - Districts</a></p>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        function toggleWing(header) {
+            const card = header.parentElement;
+            const content = card.querySelector('.wing-content');
+            const icon = header.querySelector('.expand-icon');
+
+            // Toggle active class
+            card.classList.toggle('active');
+
+            // Rotate icon
+            if (card.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -12,16 +12,4 @@ const locations = [
         ],
         notes: 'เป็นจุดศูนย์กลางของ Library of Ruina, ควบคุมโดย Angela'
     },
-    {
-        id: 'LOC-002',
-        name: 'District 23 (N Corp)',
-        type: 'location',
-        description: 'เขตที่ควบคุมโดย N Corp มี Nail technology',
-        abilities: [
-            'Nail injections',
-            'ความรุนแรงสูง',
-            'Moses อาศัยอยู่ที่นี่'
-        ],
-        notes: 'เป็นเขตอันตราย Backstreets ที่นี่โหดร้าย'
-    }
 ];

@@ -427,7 +427,8 @@ hr {
 }
 
 .wing-card.active .wing-content {
-    max-height: 500px;
+    max-height: 800px;
+    overflow-y: auto;
     padding: 20px;
 }
 
